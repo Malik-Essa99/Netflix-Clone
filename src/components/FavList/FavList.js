@@ -2,7 +2,6 @@ import { useEffect, useState, useRef } from "react";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
-import axios from "axios";
 
 export default function FavList() {
 
@@ -58,10 +57,6 @@ export default function FavList() {
             getFavMovies()
             alert("successfully deleted !!")
         }
-
-    }
-
-    function getComment() {
 
     }
 
