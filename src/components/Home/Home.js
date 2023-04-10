@@ -18,13 +18,28 @@ export default function Home() {
         // console.log(444444,movies)
 
     }
+
+    function commentHandler(newData,id){
+        movies.map(movie=>{
+            if(movie.id === id){
+                // console.log(9999,newData,id)
+                movie.comment = newData.userComment;
+                return movie
+            } else {
+                return movie
+            }
+        })
+    }
+
+
+
     useEffect(() => {
         getMovies();
     },[]);
 
     return (
         <>
-            <MovieList data={movies}/>
+            <MovieList data={movies} commentHandler={commentHandler}/>
         </>
     )
 }
